@@ -742,7 +742,7 @@ main .flex-column {
           justify-content: space-between;
 }
 
-main .flex-column aside {
+main .flex-column .left-column {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -751,19 +751,24 @@ main .flex-column aside {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #0d457f;
 }
 
-main .flex-column aside p {
+main .flex-column .left-column .posts,
+main .flex-column .left-column .mission {
+  background: #0d457f;
+  padding-left: 15px;
+}
+
+main .flex-column .left-column p {
   color: #fff;
 }
 
-main .flex-column aside ul {
+main .flex-column .left-column ul {
   list-style: none;
   padding: 0;
 }
 
-main .flex-column aside ul li {
+main .flex-column .left-column ul li {
   font-size: 20px;
   font-size: 1rem;
   margin: 0;
@@ -773,7 +778,7 @@ main .flex-column aside ul li {
   color: white;
 }
 
-main .flex-column aside ul li:before {
+main .flex-column .left-column ul li:before {
   content: "•";
   font-size: 20px;
 }
@@ -787,6 +792,30 @@ main .flex-column .right-column {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main .flex-column .right-column .blog-post {
+  position: relative;
+}
+
+main .flex-column .right-column .blog-post p {
+  padding-top: 15px;
+}
+
+main .flex-column .right-column .blog-post:before {
+  content: "";
+  border-left: 3px solid #fdd908;
+  height: 100px;
+  position: absolute;
+  display: block;
+}
+
+main .flex-column .right-column .blog-post:after {
+  content: "";
+  border-bottom: 3px solid #fdd908;
+  width: 100px;
+  position: absolute;
+  display: block;
 }
 
 main .flex-column .right-column .posted-comments .comment-box {

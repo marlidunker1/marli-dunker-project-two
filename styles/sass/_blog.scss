@@ -48,11 +48,16 @@ main {
         display: flex;
         justify-content: space-between;
 
-        aside {
+        .left-column {
             width: 30%;
             display: flex;
             flex-direction: column;
-            background: $blue-two;
+
+            .posts,
+            .mission {
+                background: $blue-two;
+                padding-left: 15px;
+            }
 
             p {
                 color: $white;
@@ -84,8 +89,33 @@ main {
             display: flex;
             flex-direction: column;
 
-            .posted-comments {
+            .blog-post {
+                position: relative;
 
+                p {
+                    padding-top: 15px;
+                }
+            }
+
+            .blog-post:before {
+                content: "";
+                border-left: 3px solid $yellow;
+                height: 100px;
+                position: absolute;
+                display: block;
+
+            }
+
+            .blog-post:after {
+                content: "";
+                border-bottom: 3px solid $yellow;
+                width: 100px;
+                position: absolute;
+                display: block;
+
+            }
+
+            .posted-comments {
 
                 .comment-box {
                     display: flex;
