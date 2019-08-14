@@ -32,9 +32,13 @@ $font-two :'Roboto', sans-serif;
 // WRAPPERS
   
 .wrapper {
-    max-width: 12800px; 
+    max-width: 1280px; 
     width: 80%;
     margin: 0 auto;
+
+    @media (max-width: 635px) {
+        width: 90%;
+    }
 }
 
 .wrapper-two {
@@ -56,6 +60,16 @@ h1 {
     font-family: $font-one;
     text-transform: uppercase;
     text-shadow: 3px 3px 5px black;
+
+    @media (max-width: 880px) {
+        @include font-size(50);
+    }
+    
+    @media (max-width: 560px) {
+        margin-top: 150px;
+        width: 100%;
+        @include font-size(45);
+    }
 }
 
 h2 {
@@ -69,6 +83,10 @@ h2 {
     @media (max-width: 1350px) {
         line-height: 40px;
         
+    }
+
+    @media (max-width: 420px) {
+        @include font-size(35);
     }
 }
 
