@@ -961,9 +961,21 @@ header {
   background-image: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  height: 70vh;
   position: relative;
   z-index: 5;
+}
+
+@media (max-width: 1040px) {
+  header {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 620px) {
+  header {
+    margin-bottom: 50px;
+  }
 }
 
 header .h1.blog {
@@ -971,6 +983,19 @@ header .h1.blog {
   margin-top: 150px;
   width: 100%;
   text-shadow: 3px 3px 5px black;
+}
+
+@media (max-width: 1040px) {
+  header .h1.blog {
+    margin-top: 75px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  header .h1.blog {
+    margin-top: 75px;
+  }
 }
 
 main {
@@ -987,11 +1012,26 @@ main .boats {
   position: relative;
 }
 
+@media (max-width: 620px) {
+  main .boats {
+    display: none;
+  }
+}
+
 main .boats .left-boat {
   width: 30%;
   position: relative;
   z-index: 10;
   bottom: -100px;
+}
+
+@media (max-width: 1040px) {
+  main .boats .left-boat {
+    margin-left: 4%;
+    margin-top: 40px;
+    width: 29%;
+    position: static;
+  }
 }
 
 main .boats .left-boat img {
@@ -1006,10 +1046,25 @@ main .boats .right-boat {
   z-index: 10;
 }
 
+@media (max-width: 1040px) {
+  main .boats .right-boat {
+    position: static;
+    margin-top: 40px;
+  }
+}
+
 main .boats .right-boat img {
   width: 100%;
   -webkit-box-shadow: -20px 20px #fdd908;
           box-shadow: -20px 20px #fdd908;
+}
+
+@media (max-width: 1040px) {
+  main .boats .right-boat img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-bottom: 50px;
+  }
 }
 
 main .flex-column {
@@ -1021,6 +1076,18 @@ main .flex-column {
           justify-content: space-between;
 }
 
+@media (max-width: 720px) {
+  main .flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 main .flex-column .left-column {
   width: 31%;
   display: -webkit-box;
@@ -1030,6 +1097,12 @@ main .flex-column .left-column {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  main .flex-column .left-column {
+    width: 100%;
+  }
 }
 
 main .flex-column .left-column .posts,
@@ -1048,6 +1121,12 @@ main .flex-column .left-column .mission:before {
   position: absolute;
   top: -175%;
   left: 0;
+}
+
+@media (max-width: 1040px) {
+  main .flex-column .left-column .mission:before {
+    display: none;
+  }
 }
 
 main .flex-column .left-column p {
@@ -1085,9 +1164,22 @@ main .flex-column .right-column {
           flex-direction: column;
 }
 
+@media (max-width: 720px) {
+  main .flex-column .right-column {
+    width: 100%;
+  }
+}
+
 main .flex-column .right-column .blog-post {
   position: relative;
   top: -2%;
+}
+
+@media (max-width: 1040px) {
+  main .flex-column .right-column .blog-post {
+    position: static;
+    margin-top: 50px;
+  }
 }
 
 main .flex-column .right-column .blog-post p {
@@ -1096,6 +1188,12 @@ main .flex-column .right-column .blog-post p {
 
 main .flex-column .right-column .blog-post .last-p {
   margin-bottom: 100px;
+}
+
+@media (max-width: 1040px) {
+  main .flex-column .right-column .blog-post .last-p {
+    margin-bottom: 50px;
+  }
 }
 
 main .flex-column .right-column .blog-post:before {
@@ -1108,14 +1206,26 @@ main .flex-column .right-column .blog-post:before {
   top: -22%;
 }
 
+@media (max-width: 1040px) {
+  main .flex-column .right-column .blog-post:before {
+    display: none;
+  }
+}
+
 main .flex-column .right-column .blog-post:after {
   content: "";
   border-bottom: 5px solid #fdd908;
-  width: 125%;
+  width: 120%;
   position: absolute;
   display: block;
   left: -13%;
   bottom: -3%;
+}
+
+@media (max-width: 1040px) {
+  main .flex-column .right-column .blog-post:after {
+    display: none;
+  }
 }
 
 .posted-comments {
@@ -1130,6 +1240,12 @@ main .flex-column .right-column .blog-post:after {
   color: #0d457f;
   margin-top: 50px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 720px) {
+  .posted-comments h2 {
+    text-align: center;
+  }
 }
 
 .posted-comments .comment-box {
@@ -1153,6 +1269,12 @@ main .flex-column .right-column .blog-post:after {
 
 .posted-comments .comment-box .image-box img {
   width: 100%;
+}
+
+@media (max-width: 620px) {
+  .posted-comments .comment-box .image-box {
+    display: none;
+  }
 }
 
 .posted-comments .comment-box .text-box {
