@@ -239,6 +239,7 @@ h1 {
   h1 {
     font-size: 50px;
     font-size: 2.5rem;
+    text-align: center;
   }
 }
 
@@ -246,8 +247,8 @@ h1 {
   h1 {
     margin-top: 150px;
     width: 100%;
-    font-size: 45px;
-    font-size: 2.25rem;
+    font-size: 29px;
+    font-size: 1.45rem;
   }
 }
 
@@ -816,6 +817,12 @@ header .h1.contact {
   text-shadow: 3px 3px 5px black;
 }
 
+@media (max-width: 620px) {
+  .contact-header {
+    height: 60vh;
+  }
+}
+
 main {
   background: #eafefc;
 }
@@ -899,6 +906,7 @@ main .contact-flex .contact-form {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-top: 40px;
+    width: 90%;
   }
 }
 
@@ -1029,15 +1037,9 @@ header {
   background-image: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 90vh;
   position: relative;
   z-index: 5;
-}
-
-@media (max-width: 1040px) {
-  header {
-    height: 50vh;
-  }
 }
 
 @media (max-width: 620px) {
@@ -1046,7 +1048,7 @@ header {
   }
 }
 
-header .h1.blog {
+header .blog {
   color: #fff;
   margin-top: 150px;
   width: 100%;
@@ -1054,15 +1056,26 @@ header .h1.blog {
 }
 
 @media (max-width: 1040px) {
-  header .h1.blog {
-    margin-top: 75px;
+  header .blog {
     text-align: center;
   }
 }
 
 @media (max-width: 620px) {
-  header .h1.blog {
-    margin-top: 75px;
+  header .blog {
+    margin-top: 125px;
+  }
+}
+
+@media (max-width: 560px) {
+  header .blog {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .blog-header {
+    height: 60vh;
   }
 }
 
