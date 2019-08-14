@@ -1,3 +1,7 @@
+body {
+    background-color: $blue-one;
+}
+
 // HEADER
 
 header {
@@ -5,6 +9,7 @@ header {
     background-image: cover;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: $blue-one;
     height: 90vh;
 
     .h1.contact {
@@ -24,6 +29,11 @@ main {
     .contact-flex {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 1065px) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     
 
         .contact-info {
@@ -31,10 +41,24 @@ main {
             padding-top: 100px;
             padding-bottom: 200px;
 
+            @media (max-width: 1065px) {
+                width: 80%;
+                text-align: center;
+            }
+        
+
+            
+
             .icon-box {
                 width: 160px;;
                 display: flex;
                 justify-content: space-between;
+
+                @media (max-width: 1065px) {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            
 
                 a {
                     color: $blue-two;
@@ -53,6 +77,12 @@ main {
             justify-content: right;
             position: relative;
             display: flex;
+
+            @media (max-width: 1065px) {
+                position: static;
+                flex-direction: column-reverse;
+                margin-top: 40px;
+            }
 
                 input {
                     background: $blue-two;
@@ -86,8 +116,14 @@ main {
     box-shadow: 15px 15px $yellow;
     z-index: 5;
 
+    @media (max-width: 1065px) {
+        position: static;
+        box-shadow: none;
+    }
+
         .contact-name {
             margin-left: 5%;
+
         }
 
         .contact-email {
@@ -98,6 +134,13 @@ main {
         .contact-name {
             margin-top: 60px;
             width: 40%;
+
+            @media (max-width: 1065px) {
+                margin: 30px 5% 0 5%;
+                width: 100%;
+                text-align: center;
+            }
+            
         }
 
         .contact-text-area {

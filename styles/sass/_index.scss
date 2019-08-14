@@ -81,7 +81,7 @@ header {
         }
 
         @media (max-width: 600px) {
-            width: 70%;
+            // width: 7%;
         }
         
     }
@@ -115,8 +115,9 @@ header {
     }
 
     @media (max-width: 560px) {
+        padding-top: 50px;
         grid-template-columns: 1fr 5fr;
-        grid-template-rows: 350px;
+        grid-template-rows: 300px;
     }
 
     @media (max-width: 420px) {
@@ -408,6 +409,11 @@ header {
 
         .six-image {
             width: 31%;
+
+            @media (max-width: 680px) {
+                width: 70%;
+                margin: 20px 0;
+            }
 
             img {
                 width: 100%;
