@@ -7,6 +7,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
+    position: relative;
+    z-index: 5;
 
     .h1.blog {
         color: $white;
@@ -28,6 +30,9 @@ main {
 
         .left-boat {
             width: 30%;
+            position: relative;
+            z-index: 10;
+            bottom: -100px;
 
             img {
                 width: 100%;
@@ -36,9 +41,15 @@ main {
 
         .right-boat {
             width: 60%;
+            position: relative;
+            right: 0;
+            bottom: 125px;
+            z-index: 10;
+
 
                 img {
                     width: 100%;
+                    box-shadow: -20px 20px $yellow;
                 }
         }
 
@@ -49,14 +60,29 @@ main {
         justify-content: space-between;
 
         .left-column {
-            width: 30%;
+            width: 31%;
             display: flex;
             flex-direction: column;
+
+
 
             .posts,
             .mission {
                 background: $blue-two;
                 padding-left: 15px;
+                position: relative;
+                display: inline-block;
+                
+            }
+
+            .mission:before {
+                content: '';
+                height: 175%;
+                width: 100%;
+                background: $blue-two;
+                position: absolute;
+                top: -175%;
+                left: 0;
             }
 
             p {
@@ -85,54 +111,99 @@ main {
         }
 
         .right-column {
-            width: 50%;
+            width: 55%;
             display: flex;
             flex-direction: column;
 
             .blog-post {
                 position: relative;
+                top: -2%;
 
                 p {
                     padding-top: 15px;
                 }
+
+                .last-p {
+                    margin-bottom: 100px;
+                } 
             }
+
 
             .blog-post:before {
                 content: "";
-                border-left: 3px solid $yellow;
-                height: 100px;
+                border-left: 5px solid $yellow;
+                height: 125%;;
                 position: absolute;
                 display: block;
+                left: -13.8%;
+                top: -22%;
 
             }
 
             .blog-post:after {
                 content: "";
-                border-bottom: 3px solid $yellow;
-                width: 100px;
+                border-bottom: 5px solid $yellow;
+                width: 125%;
                 position: absolute;
                 display: block;
+                left: -13%;
+                bottom: -3%;
 
-            }
-
-            .posted-comments {
-
-                .comment-box {
-                    display: flex;
-                    flex-direction: row;
-                }
             }
         }
     }
 }
 
-// COMMENT
+// USER COMMENTS
+
+.posted-comments {
+    align-items: center;
+    position: relative;
+    top: -2%;
+
+    h2 {
+        color: $blue-two;
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+    }
+
+    .comment-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+
+        .image-box {
+            width: 60%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text-box {
+            margin-left: 5%;
+
+            h4 {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        .upper-margin { //THIS TO SEPERATE THE TWO COMMENTS
+            margin-top: 40px;
+        }
+    }
+}
+
+// COMMENT FORM
 
 
 .blog-form { 
     width: 100%;
     position: relative;
     display: flex;
+    top: -2%;
 
         input {
             background: $blue-one;
@@ -158,24 +229,25 @@ display: flex;
 justify-content: space-between;
 flex-wrap: wrap;
 border: none;
+margin: 0;
 
 .blog-email,
 .blog-name {
     margin-top: 60px;
-    width: 40%;
+    width: 48%;
 }
 
 .blog-text-area {
     background: $blue-one;
     border: 2px solid $yellow;
-    margin-top: 40px;
+    margin: 40px 0 0 0;
     width: 100%;
     color: black;
     padding: 10px;
 }
 
 .blog-submit {
-    margin: 40px 0 100px 0;
+    margin: 40px 0 10px 0;
     font-family: $font-one;
     color: $yellow;
     @include font-size(22.4);
@@ -188,20 +260,6 @@ border: none;
 
 }
 }    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // FOOTER
 

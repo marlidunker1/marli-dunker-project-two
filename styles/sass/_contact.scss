@@ -84,6 +84,7 @@ main {
     flex-wrap: wrap;
     border: none;
     box-shadow: 15px 15px $yellow;
+    z-index: 5;
 
         .contact-name {
             margin-left: 5%;

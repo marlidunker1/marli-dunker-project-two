@@ -9,6 +9,16 @@ $white : #fff;
 
 html {
     font-size: 125%;
+
+    @media (max-width: 1200px) {
+        font-size: 115%;
+        
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 100%;
+        
+    }
 }
 
 $font-one :'IM Fell English', serif;
@@ -19,17 +29,27 @@ $font-two :'Roboto', sans-serif;
     font-size: ($size-value/20) * 1rem;
   }
 
+// WRAPPERS
+  
 .wrapper {
-    max-width: 1280px; /*IS THIS TOO BIG? ITS DPI LAPTOP*/
+    max-width: 12800px; 
     width: 80%;
     margin: 0 auto;
 }
 
 .wrapper-two {
-    max-width: 1280px; /*IS THIS TOO BIG? ITS DPI LAPTOP*/
+    max-width: 1280px; 
     width: 90%;
     margin: 0 0% 0 10%;
 }
+
+.wrapper-three {
+    max-width: 1280px; 
+    width: 92%;
+    margin: 0 auto;
+}
+
+// ELEMENTS
 
 h1 {
     @include font-size(79);
@@ -45,6 +65,11 @@ h2 {
     line-height: 99.8px;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 1350px) {
+        line-height: 40px;
+        
+    }
 }
 
 h3 {
@@ -56,6 +81,10 @@ h3 {
     padding: 0;
     color: $yellow;
     letter-spacing: 0.8px;
+}
+
+h4 {
+    color: $blue-two;
 }
 
 p {
@@ -74,4 +103,15 @@ a.button {
     background: $yellow;
     padding: 5px 10px;
     text-transform: uppercase;
+}
+
+a.button:hover {
+    background: $blue-one;
+    color: black;
+}
+
+a.button:focus {
+    border: 2px solid $yellow;
+    background: $white;
+    color: black;
 }

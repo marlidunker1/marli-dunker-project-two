@@ -12,6 +12,10 @@ header {
         padding-top: 50px;
         width: 40%;
 
+        @media (max-width: 790px) {
+            width: 100%;
+        }
+
         ul {
             margin: 0;
             padding: 0;
@@ -35,6 +39,13 @@ header {
                     border-bottom: 3px solid $yellow;
                     padding-bottom: 4px;
                 }
+
+                a:focus {
+                    border: 2px solid $yellow;
+                    background: $white;
+                    color: black;
+                }
+
             }
         }
     }
@@ -45,6 +56,12 @@ header {
             position: relative;
             z-index: 10;
             color: $yellow;
+
+            @media (max-width: 880px) {
+                margin-top: 150px;
+                width: 100%;
+                @include font-size(30);
+            }
         }
 
     img {
@@ -52,13 +69,17 @@ header {
         position: absolute;
         right: 0;
         bottom: -120px;
+
+        @media (max-width: 880px) {
+            bottom: 0;
+        }
     }
 }
 
 // MAIN 
 
 
-// SECTION 1
+// SECTION 1 - ICON GRID
 
 .section-one {
     background: $blue-one;
@@ -71,6 +92,12 @@ header {
     display: grid;
     grid-template-columns: 1fr 9fr 1fr 9fr;
     grid-template-rows: 250px;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr 9fr;
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
 
     i.fas {
         background: $yellow;
@@ -95,16 +122,21 @@ header {
     }
 
     div { 
+        margin-left: 10px;
 
         h2 {
             color: $blue-two;
+
+            @media (max-width: 1350px) {
+                margin: 25px 0;
+            }
         }
 
     }
 
 }
 
-// SECTION 2 
+// SECTION 2 -- LEFT / RIGHT BOAT
 
 .section-two {
     background-color: $blue-two;
@@ -147,12 +179,22 @@ header {
 
         .section-two-container.one {
             padding-left: 12.5%;
+
+            @media (max-width: 1200px) {
+                padding-left: 0;
+                
+            }
         }
 
         .section-two-container.two {
             padding-right: 12.5%;
             position: relative;
             text-align: right;
+
+            @media (max-width: 1200px) {
+                padding-right: 0;
+
+            }
 
                p {
                    text-align: left;
@@ -175,7 +217,7 @@ header {
 }
 
 
-// SECTION 3
+// SECTION 3 -- EXTRA VACATION DAYS
 
 .section-three {
     background: $blue-one;
@@ -197,7 +239,7 @@ header {
     }
 }
 
-// SECTION 4 
+// SECTION 4  -- IMG ONLY
 
 .section-four {
     background: $blue-one;
@@ -210,7 +252,7 @@ header {
 
 }
 
-//SECTION 5
+//SECTION 5 -- WIN A TRIP
 
 .section-five {
     background: $blue-one;
@@ -248,7 +290,7 @@ header {
 
 }
 
-// SECTION 6
+// SECTION 6 GALLERY
 
 .section-six {
     background: $blue-two;
